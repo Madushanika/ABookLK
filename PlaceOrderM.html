@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title>Order Confirmation</title>
+
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				background-color: #f0f0f0;
+				color: #333;
+				margin: 0;
+				padding: 0;
+			}
+			.container {
+				max-width: 600px;
+				margin: 0 auto;
+				background-color: #fff;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+				border-radius: 5px;
+				padding: 20px;
+			}
+			.header {
+				background-color: #007bff;
+				color: #fff;
+				padding: 10px;
+				text-align: center;
+				border-radius: 5px 5px 0 0;
+			}
+			.order-details {
+				margin: 20px 0;
+				font-size: 16px;
+			}
+			.item-row {
+				border-bottom: 1px solid #ccc;
+				padding: 10px 0;
+			}
+			.item-name {
+				font-weight: bold;
+			}
+			.total-row {
+				border-top: 1px solid #ccc;
+				font-weight: bold;
+			}
+			.footer {
+				background-color: #f0f0f0;
+				padding: 10px;
+				text-align: center;
+				border-radius: 0 0 5px 5px;
+			}
+		</style>
+
+
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">
+				<h1>{{payment_completed}}</h1>
+				
+			</div>
+			<div class="customer-details">
+				<p>{{hello}} {{fullname}}</p>
+				<p>{{address}},</p>
+			</div>
+
+			<div class="summary-col">
+			<div class="order-summary">
+				<h2>{{order_summary}} </h2>
+			</br></br>
+			<div class="order-details">
+				<p><strong>{{order_id}}</strong> 12345</p>
+				<p><strong>{{order_date}}</strong> 2023-08-07</p>
+			</div>
+				<div class="order-item">
+					<span>{{product}} 01 :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+					<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$20.00</span>
+				</div>
+				<div class="order-item">
+					<span>{{product}} 02 :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+					<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$15.00</span>
+				</div>
+				<p>--------------------------------------</p>
+				<div class="order-item">
+					<strong>{{total}}:&nbsp;&nbsp;&nbsp;&nbsp; </strong>
+					<strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $35.00</strong>
+				</div>
+				<p>--------------------------------------</p>
+			</div>
+		</div>
+
+		<div class="footer">
+				<p>{{thank_you_for_shopping}}</p>
+			</div>
+			
+		</div>
+	</body>
+	</html>
